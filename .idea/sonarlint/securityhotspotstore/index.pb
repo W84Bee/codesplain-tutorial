@@ -127,3 +127,13 @@ E
 src/hooks/useEntry.js,8/c/8c08896e8ad1a9224360d9dd25d6ad66c516486f
 G
 src/hooks/useSignOut.js,5/d/5d72ae11769fe4a9286094c63905c4b80d5a70a8
+g
+7src/components/repositories/RepositoriesSummary.test.js,2/8/28cf2f5e362227b6ee79838b5e44f842420b535c
+h
+8src/components/repositories/RepositoriesListItem.test.js,c/b/cbbf35d6229451d14f874017e6270a51fffb2f09
+L
+src/routes/HomeRoute.test.js,a/4/a4c96ab82113bd3a803b97d797fa65ff3d4c8fb0
+B
+src/test/server.js,8/6/86b20c879f3949f69ea4080ceeeeeb425af152ed
+W
+'src/components/auth/AuthButtons.test.js,9/e/9ee22103e80a1536e7fa072faad1e2b5287e199d
