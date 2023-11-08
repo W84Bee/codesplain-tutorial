@@ -127,3 +127,13 @@ K
 src/util/getLangFromPath.js,6/a/6a8443007322eefe03ad723dc2d71b2e4967398b
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
+g
+7src/components/repositories/RepositoriesSummary.test.js,2/8/28cf2f5e362227b6ee79838b5e44f842420b535c
+h
+8src/components/repositories/RepositoriesListItem.test.js,c/b/cbbf35d6229451d14f874017e6270a51fffb2f09
+B
+src/test/server.js,8/6/86b20c879f3949f69ea4080ceeeeeb425af152ed
+L
+src/routes/HomeRoute.test.js,a/4/a4c96ab82113bd3a803b97d797fa65ff3d4c8fb0
+W
+'src/components/auth/AuthButtons.test.js,9/e/9ee22103e80a1536e7fa072faad1e2b5287e199d
