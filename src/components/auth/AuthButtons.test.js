@@ -1,18 +1,24 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
+import { SWRConfig } from 'swr';
 import { createServer } from '../../test/server';
 import AuthButtons from './AuthButtons';
 
 async function renderComponent() {
   render(
-    <MemoryRouter>
-      <AuthButtons />
-    </MemoryRouter>
+    <SWRConfig value={{ provider: () => new Map() }}>
+      <MemoryRouter>
+        <AuthButtons />
+      </MemoryRouter>
+    </SWRConfig>
+
   );
   // make sure the component is rendered before testing
   // guarentees we have the right information.
   await screen.findAllByRole('link');
 }
+
+
 describe('when user is not sign in', () => {
   // createServer() ---> GET '/api/user --> { user:null }
   createServer([
@@ -50,8 +56,7 @@ describe('when user is not sign in', () => {
   });
 });
 
-
-describe.only('when user is signed in', () => {
+describe('when user is signed in', () => {
   // createServer() ---> GET '/api/user --> { user: {id: 3 email: 'asdf@a.com'} }
   createServer([
     {
@@ -60,6 +65,7 @@ describe.only('when user is signed in', () => {
       }
     }
   ])
+
   test('sign in and sign up is not visible', async () => {
     await renderComponent();
     // use QueryBy to find hidden elements on the screen.
@@ -74,6 +80,7 @@ describe.only('when user is signed in', () => {
     expect(signInButton).not.toBeInTheDocument();
     expect(signUpButton).not.toBeInTheDocument();
   });
+
   test('sign out is visible', async () => {
     await renderComponent();
 
